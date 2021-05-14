@@ -40,7 +40,7 @@ The company X mobile application now allows you to send and receive money with y
 
 The international payments API is designed to make international transactions seamless. This documentation gives an in-depth description on how the API works.
 
-#### To search for a bank across the world.
+#### 1. To search for a bank across the world. <a name="search"></a>
 
 The search API presents a way to search for any foreign bank and account number across the world.
 
@@ -48,10 +48,10 @@ The search API presents a way to search for any foreign bank and account number 
 
 | HTTP Verb    | Path         | Description                                                  |
 |   ---        | ---          | ------                                                       |
-|  `POST`      | `lookup`     | requires ths bank's `country_code` and `account_number`      |
+|  `POST`      | `lookup`     | requires the bank's `country_code` and `account_number`      |
 
 
-<h4>Sample API response for a successful return of a particular `bank`, `account number` and `account name`</h4>
+<h4>Sample API response for a successful return of a particular bank and its details</h4>
 
 ```
 
@@ -91,7 +91,7 @@ Status code `200` depicts a success, whilst error `500` depicts an error in tran
 |  `500`       | This status code indicates that there was an error getting the requested bank   |
 
 
-#### To transfer to any bank account number across the world.
+#### 2. To transfer to any bank account number across the world. <a name="transfer"></a>
 
 The transfer API presents a way to transfer to any foreign bank account number.
 
