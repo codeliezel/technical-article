@@ -22,7 +22,7 @@ Company X presents a new mobile application called "_CashOut_" which has provide
 
 #### Introduction <a name="customers-introduction"></a>
 
-The company X mobile application now allows you to send and receive money with your company x's account internationally. You can search for any foreign bank to make a transaction to that foreign bank account number.
+The company X mobile application now allows you to send and receive money with your company x's account internationally. You can search for any foreign bank account to make a transaction.
 
 #### The Advantages <a name="customers-benefits"></a>
 
@@ -33,8 +33,8 @@ The company X mobile application now allows you to send and receive money with y
 #### Steps on how it works? <a name="customers-work"></a>
 
 1. Log in to the mobile app and open the sidebar menu.
-2. Click on the menu option called "international transfers" and search for the bank's name to make a transaction.
-3. Once the bank name is gotten successfully, you can send money to a given account number.
+2. Click on the menu option called "international transfers" and search for the bank's name and account number to make a transaction.
+3. Follow the instructions on the screen to complete a transaction.
 
 -----
 
@@ -55,7 +55,7 @@ The search API presents a way to search for any foreign bank and account number 
 |  `POST`      | `lookup`     | requires the bank's `country_code` and `account_number`      |
 
 
-<h3> Sample API responses for search </h3> <a name="sample-api-search"></a> 
+#### Sample API responses for search </h3> <a name="sample-api-search">
 
 <h6>Sample API response for a successful return of a particular bank and its details</h6> 
 
@@ -92,7 +92,7 @@ The search API presents a way to search for any foreign bank and account number 
 | Status Codes | Indication                                                                      |
 |   ---        | ---                                                                             |
 |  `200`       | This status code indicates that the bank exists.                                |
-|  `500`       | This error code indicates that there was an error getting the requested bank   |
+|  `500`       | This error code indicates that there was an error getting the requested bank and account number  |
 
 
 #### 2. To transfer to any bank account number across the world. <a name="transfer"></a>
@@ -106,7 +106,7 @@ The transfer API presents a way to transfer to any foreign bank account number.
 |  `POST`      | `transfer`     | requires the `amount`, `bank` and `sort_code`     |
 
 
-<h3> Sample API responses for transfer </h3> <a name="sample-api-transfer"></a> 
+#### Sample API responses for transfer </h3> <a name="sample-api-transfer">
 
 <h6>Sample API response for a successful transaction </h6>
   
