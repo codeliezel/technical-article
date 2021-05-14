@@ -9,6 +9,10 @@
       3. [Steps on how it works?](#customers-work)
    3. [Developers](#developers)
       1. [Introduction](#developers-introduction)
+         1. [Search for a bank](#search)
+            1. [Sample API Responses](#sample-api-search)
+         3. [Transfer to a bank](#transfer)
+            1. [Sample API Responses](#sample-api-transfer)
 
 ### Overview <a name="overview"></a>
 
@@ -51,7 +55,9 @@ The search API presents a way to search for any foreign bank and account number 
 |  `POST`      | `lookup`     | requires the bank's `country_code` and `account_number`      |
 
 
-<h4>Sample API response for a successful return of a particular bank and its details</h4>
+<h3> Sample API responses for search </h3> <a name="sample-api-search"></a> 
+
+<h6>Sample API response for a successful return of a particular bank and its details</h6> 
 
 ```
 
@@ -68,7 +74,7 @@ The search API presents a way to search for any foreign bank and account number 
 
 ```
 
-<h4>Sample API error response</h4>
+<h6>Sample API error response</h6>
 
 ```
 
@@ -83,12 +89,10 @@ The search API presents a way to search for any foreign bank and account number 
 
 #### Response codes:
 
-Status code `200` depicts a success, whilst error `500` depicts an error in transaction.
-
 | Status Codes | Indication                                                                      |
 |   ---        | ---                                                                             |
 |  `200`       | This status code indicates that the bank exists.                                |
-|  `500`       | This status code indicates that there was an error getting the requested bank   |
+|  `500`       | This error code indicates that there was an error getting the requested bank   |
 
 
 #### 2. To transfer to any bank account number across the world. <a name="transfer"></a>
@@ -102,7 +106,9 @@ The transfer API presents a way to transfer to any foreign bank account number.
 |  `POST`      | `transfer`     | requires the `amount`, `bank` and `sort_code`     |
 
 
-<h4>Sample API response for a successful transaction </h4>
+<h3> Sample API responses for transfer </h3> <a name="sample-api-transfer"></a> 
+
+<h6>Sample API response for a successful transaction </h6>
   
 ```
 
@@ -120,7 +126,7 @@ The transfer API presents a way to transfer to any foreign bank account number.
 
 ```
 
-<h4>Sample API error response for an unsuccessful transaction</h4>
+<h6>Sample API error response for an unsuccessful transaction</h6>
 
 ```
 
@@ -136,10 +142,8 @@ The transfer API presents a way to transfer to any foreign bank account number.
 
 #### Response codes:
 
-Status code `200` depicts a success, whilst error `500` depicts an error in transaction.
-
 | Status Codes | Indication                                                                        |
 |   ---        | ---                                                                               |
 |  `200`       | This status code indicates that the transaction is successful.                    |
-|  `500`       | This status code indicates that there was an error in performing the transaction  |
+|  `500`       | This error code indicates that there was an error in performing the transaction  |
 
